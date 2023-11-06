@@ -1,4 +1,4 @@
-package ud01;
+package test;
 /*
  * Ejercicio entrada de datos:
  * se introduce por teclado nombre, apellidos, edad, num.dni, sueldo
@@ -40,5 +40,6 @@ public class EjercicioEntradaDatos {
         int resto = numDni % 23;
         System.out.println("Tu NIF es: "+ numDni + "-" + letrasDNI.charAt(resto));
         System.out.println("Tu sueldo era "+sueldo+" con el incremento será " + sueldo*1.2);
+        teclado.close();
     }
 }
