@@ -28,17 +28,17 @@ public class Ejercicio17 {
                 //this.precio-=(this.precio*0)/100;
                 this.precioLibro=this.precio*1;
             } else if (this.unidades>=6 && this.unidades<=10) {
-                this.precioLibro=this.precio-(this.precio*10)/100;
+                this.precioLibro=(this.unidades)*this.precio-(this.precio*10)/100;
             } else if (this.unidades>=11 && this.unidades<=20) {
-                this.precioLibro=this.precio-(this.precio*15)/100;
+                this.precioLibro=(this.unidades)*this.precio-(this.precio*15)/100;
             } else if (this.unidades>20) {
-                this.precioLibro=this.precio-(this.precio*20)/100;
+                this.precioLibro=(this.unidades)*this.precio-(this.precio*20)/100;
             } else {
                 //nulo
                 this.precioLibro=0;
             }
 
-            respuesta=precioLibro+ "si";
+            respuesta="El precio de los libros es: " + precioLibro;
 
         } else if (this.publicacion.toLowerCase().equals("revista")) {
             if (this.unidades<=5) {
@@ -46,17 +46,17 @@ public class Ejercicio17 {
                 //this.precio-=(this.precio*0)/100;
                 this.precioRevista=this.precio*1;
             } else if (this.unidades>=6 && this.unidades<=10) {
-                this.precioRevista=precio-(this.precio*15)/100;
+                this.precioRevista=(this.unidades)*precio-(this.precio*15)/100;
             } else if (this.unidades>=11 && this.unidades<=20) {
-                this.precioRevista=precio-(this.precio*20)/100;
+                this.precioRevista=(this.unidades)*precio-(this.precio*20)/100;
             } else if (this.unidades>20) {
-                this.precioRevista=precio-(this.precio*25)/100;
+                this.precioRevista=(this.unidades)*precio-(this.precio*25)/100;
             } else {
                 //nulo
                 this.precioRevista=0;
             }
             
-            respuesta=precioRevista + "no";
+            respuesta="El precio de las revista es: " + precioRevista;
 
         } else {
             respuesta="No se ha añadido una respuesta correcta";
@@ -72,9 +72,8 @@ public class Ejercicio17 {
         double precio;
         int unidades;
 
-        System.out.println("Introduzca las primeras publicaciones:");
-        System.out.print("Publicacion: ");
-        entrada.nextLine();
+        System.out.println("\nIntroduzca las primeras publicaciones:");
+        System.out.print("Publicacion(Libro/Revista): ");
         publicacion=entrada.nextLine();
 
         System.out.print("Precio: ");
@@ -85,8 +84,8 @@ public class Ejercicio17 {
 
         Ejercicio17 publi1 = new Ejercicio17(publicacion, precio, unidades);
 
-        System.out.println("Introduzca las segundas publicaciones:");
-        System.out.print("Publicacion: ");
+        System.out.println("\n\nIntroduzca las segundas publicaciones:");
+        System.out.print("Publicacion(Libro/Revista): ");
         entrada.nextLine();
         publicacion=entrada.nextLine();
 
@@ -98,8 +97,8 @@ public class Ejercicio17 {
 
         Ejercicio17 publi2 = new Ejercicio17(publicacion, precio, unidades);
 
-        System.out.println(publi1.seleccionPublicacion());
-        System.out.println(publi2.seleccionPublicacion());
+        System.out.println("\n\n" + publi1.seleccionPublicacion());
+        System.out.println("\n\n" + publi2.seleccionPublicacion());
 
         entrada.close();
     }
