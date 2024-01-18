@@ -23,12 +23,12 @@ public class Ejercicio17 {
         String respuesta; 
         
         if (this.publicacion.toLowerCase().equals("libro")) {
-            if (this.unidades<=5) {
+            if (this.unidades>=1&&this.unidades<=5) {
                 //por si se quisiera añadir
                 //this.precio-=(this.precio*0)/100;
-                this.precioLibro=this.precio*1;
+                this.precioLibro=(this.unidades)*this.precio*1;
             } else if (this.unidades>=6 && this.unidades<=10) {
-                this.precioLibro=(this.unidades)*this.precio-(this.precio*10)/100;
+                this.precioLibro=(this.unidades)*(this.precio-(this.precio*10)/100);
             } else if (this.unidades>=11 && this.unidades<=20) {
                 this.precioLibro=(this.unidades)*this.precio-(this.precio*15)/100;
             } else if (this.unidades>20) {
@@ -38,13 +38,13 @@ public class Ejercicio17 {
                 this.precioLibro=0;
             }
 
-            respuesta="El precio de los libros es: " + precioLibro;
+            respuesta="El precio de los libros es: " + this.precioLibro;
 
         } else if (this.publicacion.toLowerCase().equals("revista")) {
             if (this.unidades<=5) {
                 //por si se quisiera añadir
                 //this.precio-=(this.precio*0)/100;
-                this.precioRevista=this.precio*1;
+                this.precioRevista=(this.unidades)*this.precio*1;
             } else if (this.unidades>=6 && this.unidades<=10) {
                 this.precioRevista=(this.unidades)*precio-(this.precio*15)/100;
             } else if (this.unidades>=11 && this.unidades<=20) {
@@ -56,7 +56,7 @@ public class Ejercicio17 {
                 this.precioRevista=0;
             }
             
-            respuesta="El precio de las revista es: " + precioRevista;
+            respuesta="El precio de las revista es: " + this.precioRevista;
 
         } else {
             respuesta="No se ha añadido una respuesta correcta";
@@ -99,6 +99,8 @@ public class Ejercicio17 {
 
         System.out.println("\n\n" + publi1.seleccionPublicacion());
         System.out.println("\n\n" + publi2.seleccionPublicacion());
+
+        
 
         entrada.close();
     }

@@ -30,12 +30,11 @@ public class Ejercicio10 {
         a2 = entrada.nextInt();
 
         if (a1<a2 || ((a1==a2) && (m1<m2)) || ((a1==a2) && (m1==m2) && (d1<d2))) {
-            System.out.printf("La fecha menor es: %d-%d-%d",d1,m1,a1);
+            System.out.printf("La fecha menor es: %02d-%02d-%04d",d1,m1,a1);
         } else {
-            System.out.printf("La fecha menor es: %d-%d-%d",d2,m2,a2);
+            System.out.printf("La fecha menor es: %02d-%02d-%04d",d2,m2,a2);
         }
 
         entrada.close();
-        dsdas
     }
 }

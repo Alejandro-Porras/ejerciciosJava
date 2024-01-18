@@ -3,7 +3,7 @@ package ud03;
 import java.util.Scanner;
 
 public class Ejercicio13 {
-    
+
     private int horas;
     private int sueldo;
     private double sueldoNeto;
@@ -29,7 +29,7 @@ public class Ejercicio13 {
         return sueldo;
     }
     public double salarioNeto(){
-        
+
         if (this.sueldo<=350) {
             this.sueldoNeto = (double)this.sueldo - ((double)this.sueldo * menorQue) ;
         } else {
@@ -41,7 +41,7 @@ public class Ejercicio13 {
     public static void main(String[] args) {
         Scanner entrada= new Scanner(System.in);
         int horas;
-        
+
         System.out.println("Introduzca horas: ");
         horas = entrada.nextInt();
 
