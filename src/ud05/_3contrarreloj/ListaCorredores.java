@@ -18,6 +18,8 @@ public class ListaCorredores {
                 encontrado = true;
             }
         }
+        System.out.println(encontrado);
+        System.out.println(!encontrado);
         if (!encontrado) {
             this.lista[i]= c;
             this.numCorredores++;
