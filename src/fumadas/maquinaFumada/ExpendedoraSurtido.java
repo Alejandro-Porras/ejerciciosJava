@@ -73,7 +73,6 @@ public class ExpendedoraSurtido {
     // Metodo para introducir el credito a la maquina expendedora
     public void introducirDinero(double importe){
         this.credito += importe;
-        System.out.println(this.productos.numProductos());
     }
 
     // Metido para devolverle el dinero al usuario, por lo tanto, credito será 0
@@ -203,11 +202,11 @@ public class ExpendedoraSurtido {
         } catch (IOException e) {
             System.out.println("ERROR: " + e.getMessage());
         }
-        entrada.close();
         try {
             this.productos = new Surtido();
         } catch (FileNotFoundException e) {
             System.out.println("ERROR: " + e.getMessage());
         }
+        
     }
 }

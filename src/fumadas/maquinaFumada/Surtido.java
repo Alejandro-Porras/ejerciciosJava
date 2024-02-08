@@ -116,28 +116,15 @@ public class Surtido {
 
     // toString el cual va a ser modificau.
     @Override
-    public String toString() {
+    public String toString (){
         String str = "";
-        for (int i = 1; i < listaProductos.length; i++) {
-            str += listaProductos[i];
+        str += "*****************************************" + "\n";
+        str += "*\t\t" + "\u001B[35m" + "\u001B[1m" + "PRODUCTOS" + "\u001B[0m" + "\t\t*" + "\n";
+        str += "*\t" + "\u001B[34m" + "Codigo" +  "\t" + "Nombre" + "\t" + "Precio" + "\t" + "Stock" + "\u001B[0m" +"\t*" + "\n";
+        for (int i = 1; i < this.listaProductos.length; i++) {
+                str += "*\t" + i + "\t" + listaProductos[i].getNombre() + "\t" + listaProductos[i].getPrecio() + "\t" + listaProductos[i].getStock() + "\t*" + "\n";  
         }
+        str += "*****************************************";
         return str;
-    }
-
-    // TEST
-    public static void main(String[] args) {
-        try {
-            Surtido s1 = new Surtido();
-            System.out.println(s1);
-            System.out.println(s1.numProductos());
-            System.out.println(s1.getProducto(4));
-            for (int i = 1; i < s1.getNombresProductos().length; i++) {
-                System.out.println(s1.getNombresProductos()[i]);
-            }
-
-        } catch (FileNotFoundException | RangoInvalidoException e) {
-            System.out.println(e.getMessage());
-        }
-        
     }
 }

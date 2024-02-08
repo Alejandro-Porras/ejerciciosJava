@@ -1,7 +1,18 @@
-6
-123.5
-3.5
-jamon;1.75;1
-queso;2.5;5
+15
+127.75
+2000.0
+jamon;1.75;2
+queso;2.5;4
 pavo;3.5;8
 salami;3.3;7
+Pescado;4.2;20
+Jordan4;400.0;10
+nikeSB;150.0;200
+Jordan1;120.0;15
+carne;10.0;50
+rosa;1.0;20
+tacos;5.0;30
+cafes;2.0;90
+ferrari;2.0;1
+Cola Cola;2.0;90
+creatina;12.0;20
