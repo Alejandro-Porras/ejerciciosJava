@@ -1,0 +1,5 @@
+4
+jamon 1.75 3
+queso 2.5 5
+pavo 3.5 8
+salami 3.3 7
