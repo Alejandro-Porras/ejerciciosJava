@@ -53,7 +53,7 @@ public class TestExpendedora {
         }
 
         // Creamos la segunda maquina expendedora con 0 de stock para comprobar la excepcion.
-        Expendedora e3 = new Expendedora(100, 1, 0);
+        Expendedora e3 = new Expendedora(100, 1, 1);
 
         e3.introducirDinero(1000000);
         try {

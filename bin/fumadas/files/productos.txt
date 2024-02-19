@@ -1,10 +1,8 @@
-15
+12
 127.75
 2000.0
-jamon;1.75;2
 queso;2.5;4
 pavo;3.5;8
-salami;3.3;7
 Pescado;4.2;20
 Jordan4;400.0;10
 nikeSB;150.0;200
@@ -15,4 +13,3 @@ tacos;5.0;30
 cafes;2.0;90
 ferrari;2.0;1
 Cola Cola;2.0;90
-creatina;12.0;20

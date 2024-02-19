@@ -34,7 +34,10 @@ public class TestExpendedoraSurtida {
         str += "*\t" + "2. Ver cambio" + "\t\t*" + "\n";
         str += "*\t" + "3. Insertar Cambio" + "\t*" + "\n";
         str += "*\t" + "4. Añadir producto" + "\t*" + "\n";
-        str += "*\t" + "5. Salir" + "\t\t*" + "\n";
+        str += "*\t" + "5. Mostrar productos" + "\t*" + "\n";
+        str += "*\t" + "6. Modificar producto" + "\t*" + "\n";
+        str += "*\t" + "7. Eliminar producto" + "\t*" + "\n";
+        str += "*\t" + "8. Salir" + "\t\t*" + "\n";
         str += "*********************************" + "\n";
         return str;
     }
@@ -86,11 +89,26 @@ public class TestExpendedoraSurtida {
                                 expendedora1.añadirProducto();
                                 input.nextLine();
                                 break;
+                            case 5:
+                                System.out.println(expendedora1.toStringSurtido());
+                                System.out.println("\u001B[36m" +  "\u001B[1m" + "Regresando al menu...." + "\u001B[0m");
+                                Thread.sleep(1000*5); 
+                                break;
+                            case 6:
+                                expendedora1.modificarProducto();
+                                System.out.println("\u001B[36m" +  "\u001B[1m" + "Regresando al menu...." + "\u001B[0m");
+                                Thread.sleep(1000*5); 
+                                break;
+                            case 7:
+                                expendedora1.eliminarProducto();
+                                System.out.println("\u001B[36m" +  "\u001B[1m" + "Regresando al menu...." + "\u001B[0m");
+                                Thread.sleep(1000*5); 
+                                break;
                             default:
                                 input.nextLine();
                                 break;
                         }
-                    } while (eleccion != 5);
+                    } while (eleccion != 8);
                     break;
             
                 default:
@@ -112,17 +130,24 @@ public class TestExpendedoraSurtida {
                             int producto = input.nextInt();
                             
                             try {
-                                expendedora1.comprarProducto(producto);
+                                double devolucion = expendedora1.comprarProducto(producto);
                                 System.out.print("\033[H\033[2J");  
                                 System.out.flush();
     
                                 //Barra de carga
-                                int totalIteraciones = 50;
+                                //Podemos mover esto a mucho menos
+                                int totalIteraciones = 50; 
+                                //Recorremos el bucle mientras i sea menor o igual que las iteraciones totales
                                 for (int i = 0; i <= totalIteraciones; i++) {
+                                    //Guardamos en un int progreso el resultado de la division 
+                                    //entre i y las iteraciones (*100 porque es porcentaje)
                                     int progreso = (int) ((double) i / totalIteraciones * 100);
                                     System.out.print("\r[");
+                                    //Recorremos el bucle con la condiciones de que j sea manor que las iteraciones
                                     for (int j = 0; j < totalIteraciones; j++) {
+                                        //Si j es menor que i entraremos en la condicion
                                         if (j < i) {
+                                            //Evaluamos los posibles casos que se pueden dar
                                             if (progreso < 50) {
                                                 System.out.print("\u001B[31m█");
                                             } else if (progreso < 75) {
@@ -134,18 +159,19 @@ public class TestExpendedoraSurtida {
                                             System.out.print(" ");
                                         }
                                     }
+                                    //Mostramos la barra con el progreso actual
                                     System.out.print("] " + progreso + "%");
+                                    //Esperamos
                                     Thread.sleep(100);
                                 }
                                 System.out.println();
                                 System.out.println("Producto comprado :)");
+                                System.out.println("A devolver: " + devolucion);
                                 System.out.println("\u001B[0m");
                             } catch (NoHayCambioException | NoHayProductoException | CreditoInsuficienteException
                                     | RangoInvalidoException e) {
                                         System.out.println(e.getMessage());
                             }
-                                
-                            
                             Thread.sleep(1000*2);
                             break;
                         case 3:

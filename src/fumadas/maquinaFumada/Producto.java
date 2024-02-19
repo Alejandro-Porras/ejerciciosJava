@@ -23,6 +23,17 @@ public class Producto {
     public int getStock() {
         return stock;
     }
+
+    //Setters
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
     
     // Decrementar el stock del producto
     public int decrementarStock(){
