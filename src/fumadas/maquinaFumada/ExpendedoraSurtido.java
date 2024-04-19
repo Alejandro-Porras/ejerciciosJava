@@ -75,7 +75,7 @@ public class ExpendedoraSurtido {
         this.credito += importe;
     }
 
-    // Metido para devolverle el dinero al usuario, por lo tanto, credito será 0
+    // Metodo para devolverle el dinero al usuario, por lo tanto, credito será 0
     public double solicitarDevolucion(){
         double devolucion = this.credito;
         this.credito = 0;

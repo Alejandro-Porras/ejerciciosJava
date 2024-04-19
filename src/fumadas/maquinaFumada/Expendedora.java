@@ -1,5 +1,6 @@
 package fumadas.maquinaFumada;
 
+//este no esta modificau
 public class Expendedora {
     private double credito;
     private int stock;
