@@ -1810,7 +1810,7 @@ adónico
 adonio
 adonis
 adonizarse
-adopción
+adopcion
 adopcionismo
 adopcionista
 adoptación
@@ -6638,7 +6638,7 @@ antirrepublicano
 antirreumático
 antirrevolucionario
 antirrobo
-antisatélite
+antisatelite
 antiscio
 antisemita
 antisemítico
@@ -13683,7 +13683,7 @@ brosladura
 broslar
 brosquil
 brota
-brotación
+brotacion
 brotado
 brotadura
 brótano
@@ -41168,7 +41168,7 @@ frontis
 frontispicio
 frontón
 frontudo
-frotación
+frotacion
 frotador
 frotadura
 frotamiento
@@ -49238,7 +49238,7 @@ invadir
 invaginación
 invaginar
 invalidación
-inválidamente
+invalidamente
 invalidante
 invalidar
 invalidez
@@ -60387,7 +60387,7 @@ opalizar
 ópalo
 opante
 opar
-opción
+opcion
 opcional
 ópera
 operable
@@ -60521,7 +60521,7 @@ orballo
 orbe
 orbedad
 orbicular
-órbita
+orbita
 orbital
 orbitar
 orbitario
@@ -72291,7 +72291,7 @@ reutilización
 reutilizar
 revacunación
 revacunar
-reválida
+revalida
 revalidación
 revalidar
 revalorización
@@ -73113,7 +73113,7 @@ rostritorcido
 rostrituerto
 rostrizo
 rostro
-rotación
+rotacion
 rotacismo
 rotafolio
 rotaje
@@ -74472,7 +74472,7 @@ satanismo
 satanización
 satanizar
 satelital
-satélite
+satelite
 satén
 sático
 satín
@@ -83185,7 +83185,7 @@ valía
 valiato
 validación
 validador
-válidamente
+validamente
 validar
 validez
 valido

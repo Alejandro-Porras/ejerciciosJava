@@ -33,7 +33,7 @@ public class ContraReloj {
         resultado += "* 4=> Han Salido                 *\n";
         resultado += "* 5=> Salir                      *\n";
         resultado += "**********************************\n";
-        resultado += "Elige una opción (1-5): ";
+        resultado += "Elige una opcion (1-5): ";
         return resultado;
     }
 
@@ -96,7 +96,7 @@ public class ContraReloj {
                     System.out.println(hanSalido.toString());
                     break;
                 default:
-                    System.out.println("Opción incorrecta, intentelo de nuevo");
+                    System.out.println("opcion incorrecta, intentelo de nuevo");
             }
             System.out.print(menu());
         }

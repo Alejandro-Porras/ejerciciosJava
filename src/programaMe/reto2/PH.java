@@ -77,30 +77,66 @@ public class PH {
                             tableroRelleno[robotMovil[0]][robotMovil[1]+1] == 3) {
                     return true;
                 }
+
+                boolean seMueve = false;
                 // Derecha
-                if (robotMovil[0] <= tesoro[0] && tableroRelleno[robotMovil[0]+1][robotMovil[1]] != 1) {
-                    tableroRelleno[robotMovil[0]][robotMovil[1]] = 0;
-                    robotMovil[0]++;
-                    tableroRelleno[robotMovil[0]][robotMovil[1]] = 2;
-                // Izquierda
-                }else if (robotMovil[0] > tesoro[0] && robotMovil[0]-1 != 1) {
-                    tableroRelleno[robotMovil[0]][robotMovil[1]] = 0;
-                    robotMovil[0]--;
-                    tableroRelleno[robotMovil[0]][robotMovil[1]] = 2;
-                // Abajo
-                } else if (robotMovil[1] <= tesoro[1] && robotMovil[1]+1 != 1) {
+                if (robotMovil[1] < tesoro[1] && tableroRelleno[(robotMovil[0])][robotMovil[1]+1] != 1) {
+                    System.out.println(tableroRelleno[(robotMovil[0])+1][robotMovil[1]] + " Derecha");
                     tableroRelleno[robotMovil[0]][robotMovil[1]] = 0;
                     robotMovil[1]++;
                     tableroRelleno[robotMovil[0]][robotMovil[1]] = 2;
-                // Arriba
-                }else if (robotMovil[1] > tesoro[1] && robotMovil[1]-1 != 1) {
+                    seMueve = true;
+                // Izquierda
+                } else if (robotMovil[1] > tesoro[1] && tableroRelleno[(robotMovil[0])][robotMovil[1]-1] != 1) {
+                    System.out.println(tableroRelleno[(robotMovil[0])+1][robotMovil[1]] + " Izquierda");
                     tableroRelleno[robotMovil[0]][robotMovil[1]] = 0;
                     robotMovil[1]--;
                     tableroRelleno[robotMovil[0]][robotMovil[1]] = 2;
+                    seMueve = true;
+                // Arriba
+                } else if (robotMovil[0] > tesoro[0] && tableroRelleno[(robotMovil[0])-1][robotMovil[1]] != 1) {
+                    System.out.println(tableroRelleno[(robotMovil[0])+1][robotMovil[1]] + " Arriba");
+                    tableroRelleno[robotMovil[0]][robotMovil[1]] = 0;
+                    robotMovil[0]--;
+                    tableroRelleno[robotMovil[0]][robotMovil[1]] = 2;
+                    seMueve = true;
+                // Abajo
+                } else if (robotMovil[0] < tesoro[0] && tableroRelleno[(robotMovil[0])+1][robotMovil[1]] != 1) {
+                    System.out.println(tableroRelleno[(robotMovil[0])+1][robotMovil[1]] + " Abajo");
+                    tableroRelleno[robotMovil[0]][robotMovil[1]] = 0;
+                    robotMovil[0]++;
+                    tableroRelleno[robotMovil[0]][robotMovil[1]] = 2;
+                    seMueve = true;
                 }
+                    
+                if (!seMueve) {
+                    // Arriba
+                    if (robotMovil[0] > tesoro[0] && tableroRelleno[(robotMovil[0])-1][robotMovil[1]] != 1) {
+                        System.out.println(tableroRelleno[(robotMovil[0])+1][robotMovil[1]] + " Arriba");
+                        tableroRelleno[robotMovil[0]][robotMovil[1]] = 0;
+                        robotMovil[0]--;
+                        tableroRelleno[robotMovil[0]][robotMovil[1]] = 2;
+                    // Abajo
+                    } else if (robotMovil[0] < tesoro[0] && tableroRelleno[(robotMovil[0])+1][robotMovil[1]] != 1) {
+                        System.out.println(tableroRelleno[(robotMovil[0])+1][robotMovil[1]] + " Abajo");
+                        tableroRelleno[robotMovil[0]][robotMovil[1]] = 0;
+                        robotMovil[0]++;
+                        tableroRelleno[robotMovil[0]][robotMovil[1]] = 2;
+                    // Derecha
+                    } else if (robotMovil[1] < tesoro[1] && tableroRelleno[(robotMovil[0])][robotMovil[1]+1] != 1) {
+                        System.out.println(tableroRelleno[(robotMovil[0])+1][robotMovil[1]] + " Derecha");
+                        tableroRelleno[robotMovil[0]][robotMovil[1]] = 0;
+                        robotMovil[1]++;
+                        tableroRelleno[robotMovil[0]][robotMovil[1]] = 2;
+                    // Izquierda
+                    } else if (robotMovil[1] > tesoro[1] && tableroRelleno[(robotMovil[0])][robotMovil[1]-1] != 1) {
+                        System.out.println(tableroRelleno[(robotMovil[0])+1][robotMovil[1]] + " Izquierda");
+                        tableroRelleno[robotMovil[0]][robotMovil[1]] = 0;
+                        robotMovil[1]--;
+                        tableroRelleno[robotMovil[0]][robotMovil[1]] = 2;
+                    }
+                }     
             }
-
-
         }
         return true;
     } 
@@ -134,7 +170,7 @@ public class PH {
         //     celdas[i][1] = Integer.parseInt(arrayCeldas[1]);
         // }
 
-        int[][] celdas = {{1,2},{4,1}};
+        int[][] celdas = {{1,2},{2,2},{4,1}};
 
         if (calculoTablero(tablero, robot, tesoro, celdas)) {
             System.out.println("TESORO");

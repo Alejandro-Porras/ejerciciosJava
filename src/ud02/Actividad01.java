@@ -8,6 +8,15 @@ public class Actividad01 {
         return (1.8*celsius)+32;
     }
 
+    /**
+     * The function `farenheitToCelsius` converts a temperature value from Fahrenheit to Celsius.
+     * 
+     * @param farenheit The parameter `farenheit` represents a temperature value in Fahrenheit that you
+     * want to convert to Celsius. The `farenheitToCelsius` method takes this Fahrenheit temperature as
+     * input and returns the equivalent temperature in Celsius.
+     * @return The method `farenheitToCelsius` is returning the temperature converted from Fahrenheit
+     * to Celsius.
+     */
     public static double farenheitToCelsius (double farenheit){
 
         return (farenheit-32)/1.8;

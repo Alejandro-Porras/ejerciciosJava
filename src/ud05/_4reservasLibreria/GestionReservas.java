@@ -23,7 +23,7 @@ public class GestionReservas {
         resultado += "* 5=> Mostrar reservas           *\n";
         resultado += "* 6=> Salir                      *\n";
         resultado += "**********************************\n";
-        resultado += "Elige una opción (1-6): ";
+        resultado += "Elige una opcion (1-6): ";
         System.out.println(resultado);
     }
 
